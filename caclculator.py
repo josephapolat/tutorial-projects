@@ -1,23 +1,21 @@
-import tkinter as tk
+from tkinter import *
+window = Tk()
 
-def on_button_click():
-    print("hello")
+window.geometry("300x400")
+window.resizable(False, False)
+disp = Entry(window, state='readonly', readonlybackground="white")
+disp.grid(column=0, row=0, columnspan=4)
+#row 1
+seven = Button(window, text="7")
+seven.grid(column=0,row=1, sticky='nesw')
 
-root = tk.Tk()
+eight = Button(window, text="8")
+eight.grid(column=1,row=1, sticky='nesw')
 
-root.title("Calculator")
-root.geometry("200x400")
+nine = Button(window, text="9")
+nine.grid(column=2,row=1, sticky='nesw')
 
-label = tk.Label(root, text = "Calculator")
+divide = Button(window, text="÷")
+divide.grid(column=3,row=1, sticky='nesw')
 
-label.pack(pady=20)
-
-button = tk.Button(
-    root,
-    text = "Submit",
-    command = on_button_click
-)
-
-button.pack(pady=20)
-
-root.mainloop()
+window.mainloop()
